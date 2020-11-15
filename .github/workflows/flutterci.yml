@@ -42,8 +42,8 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v1
         with:
-          name: test-reports
-          path: test-reports.txt
+          name: test_reports
+          path: test_reports.txt
         
       - name: Slack notification
         if: always()
