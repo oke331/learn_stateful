@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: test-reports
-          path: test-reports
+          path: test-reports.txt
         
       - name: Slack notification
         if: always()
@@ -54,4 +54,4 @@ jobs:
           channel: '#general'
           commit: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          url: ${{ secrets.SLACK_WEBHOOK }}
