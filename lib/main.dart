@@ -46,19 +46,21 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('中年男性の状態変化回数：$_count'),
-            Icon(Icons.save),
-            _isSlimMan
-                ? Image.asset('assets/fat.PNG')
-                : Image.asset('assets/slim.PNG'),
-            ElevatedButton(
-              onPressed: changeBody,
-              child: _isSlimMan ? Text('ダイエットする') : Text('リバウンドする'),
-            )
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text('中年男性の状態変化回数：$_count'),
+              Icon(Icons.save),
+              _isSlimMan
+                  ? Image.asset('assets/fat.PNG')
+                  : Image.asset('assets/slim.PNG'),
+              ElevatedButton(
+                onPressed: changeBody,
+                child: _isSlimMan ? Text('ダイエットする') : Text('リバウンドする'),
+              )
+            ],
+          ),
         ),
       ),
     );
