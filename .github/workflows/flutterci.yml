@@ -34,9 +34,7 @@ jobs:
           
       - name: Test
         run: |
-          export PATH=$PATH:${FLUTTER_HOME}/bin/cache/dart-sdk/bin
-          export PATH=$PATH:${FLUTTER_HOME}/.pub-cache/bin
-          ./test.sh
+          flutter test
       
       - name: Activate test results
         if: always()
